@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+@layer components {
+  .input[disabled] {
+    @apply bg-light-border_primary text-light-paragraph_color dark:text-dark-paragraph_color border-light-border_primary dark:border-dark-border_secondary;
+  }
+
+  .btn-primary {
+    @apply bg-blue flex items-center gap-2 justify-center px-4 py-2 text-white fill-white text-lg tracking-wider font-semibold hover:bg-blue_hover transition duration-200;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent hover:bg-gray-100 hover:border-gray-400 dark:hover:bg-gray-700 px-4 py-[5px] rounded-full text-base text-light-paragraph_color dark:text-dark-paragraph_color border border-light-border_primary dark:border-dark-border_secondary;
+  }
+
+  .btn-tertiary {
+    @apply flex items-center gap-2 justify-center px-4 py-2 text-blue fill-white hover:bg-light-border_primary dark:hover:bg-dark-border_secondary text-sm font-semibold border border-blue transition duration-200;
+  }
+
+  .btn-icon {
+    @apply p-3 rounded-full hover:bg-light-border_primary dark:hover:bg-dark-border_primary;
+  }
+
+  .btn-tab {
+    @apply dark:hover:bg-dark-border_secondary hover:bg-light-border_primary rounded-t-md cursor-pointer flex items-center gap-2 px-2 pt-4 pb-2 font-semibold text-base text-black dark:text-dark-heading_color;
+  }
+
+  .card {
+    @apply rounded-md py-spacing bg-white dark:bg-dark-primary_background border border-light-border_primary dark:border-dark-border_primary;
+  }
+
+  .input {
+    @apply p-4 rounded-md border border-light-border_primary dark:border-dark-border_secondary text-lg text-black dark:text-white bg-light-input_background dark:bg-dark-border_primary w-full;
+  }
+  .textarea {
+    @apply p-4 rounded-md min-h-[15rem] border border-light-border_primary dark:border-dark-border_secondary text-lg text-black dark:text-white bg-light-input_background dark:bg-dark-border_primary w-full;
+  }
+}
