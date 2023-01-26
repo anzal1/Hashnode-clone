@@ -2,11 +2,11 @@ import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { createUploadLink } from "apollo-upload-client";
 
 const uploadLink = createUploadLink({
-  uri: process.env.NEXTAUTH_URL + "/graphql",
+  uri: `${process.env.NEXT_PUBLIC_AUTH_URL}/graphql`,
 });
 
 const client = new ApolloClient({
-  uri: process.env.NEXTAUTH_URL + "/graphql",
+  uri: `${process.env.NEXT_PUBLIC_AUTH_URL}/graphql`,
   link: uploadLink,
   cache: new InMemoryCache({
     addTypename: false,

@@ -35,12 +35,15 @@ async function startApolloServer(typeDefs, resolvers) {
     connect();
 
     server.applyMiddleware({ app, cors: corsOptions });
-
-    await new Promise((resolve) => app.listen({ port: 5000 }, resolve));
-
-    console.log(
-      `🚀 Server ready at localhost:5000${server.graphqlPath}` // https://hashnode-azure.vercel.app
-    );
+    new Promise((res, rej) => {
+      res(
+        app.listen(5000, () => {
+          console.log(
+            `🚀 Server ready at localhost:5000${server.graphqlPath}` // https://hashnode-azure.vercel.app
+          );
+        })
+      );
+    });
   } catch (err) {
     console.log("Error: ", err);
   }
