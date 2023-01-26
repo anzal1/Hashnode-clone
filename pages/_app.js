@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <ApolloProvider client={client}>
-        <ContextHandler values={{ name: "Ujenbasi" }}>
+        <ContextHandler values={{ name: "anzal" }}>
           <NextProgress color="rgb(91 121 209)" />
           <Component {...pageProps} />
         </ContextHandler>

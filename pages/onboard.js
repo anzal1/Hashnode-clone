@@ -52,15 +52,15 @@ const Onboard = () => {
   };
 
   const testlogin = () => {
-    setLogin({ email: "ujenbasi@gmail.com", password: "ujenbasi9818123191" });
+    setLogin({ email: "anzal@gmail.com", password: "anzal914045" });
   };
 
   const testSignup = () => {
     setSignup({
-      email: `ujenbasi${Math.floor(
+      email: `anzal${Math.floor(
         Math.random() * (9999 - 1000) + 1000
       )}@gmail.com`,
-      password: "9818123191",
+      password: "anzal914045",
     });
   };
 
