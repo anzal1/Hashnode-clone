@@ -22,7 +22,7 @@ async function startApolloServer(typeDefs, resolvers) {
     const server = new ApolloServer({
       typeDefs,
       resolvers,
-      // cors: cors(corsOptions),
+      cors: cors(corsOptions),
       context: async ({ req, res }) => {
         return { req, res };
       },
